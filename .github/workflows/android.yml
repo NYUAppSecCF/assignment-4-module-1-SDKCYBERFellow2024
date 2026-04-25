@@ -26,7 +26,7 @@ jobs:
         cache: gradle
     - name: Initialize gradle project
       run: |
-        gradle init --type java-application --dsl kotlin --project-name GiftcardSite --package com.example.giftcardsite --overwrite
+        gradle init --type java-application --dsl kotlin --project-name GiftcardSite --overwrite
         
     - name: SETUP GRADLE
       uses: gradle/gradle-build-action@v2
