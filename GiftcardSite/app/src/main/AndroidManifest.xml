@@ -56,7 +56,7 @@
             android:label="@string/title_activity_scrolling"
             android:theme="@style/Theme.GiftcardSite.NoActionBar"
             android:exported="false">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -65,7 +65,7 @@
                     android:mimeType="text/giftcards_browse"
                     android:scheme="giftcard"
                     android:host="appsec.moyix.net"/>
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity
             android:name=".MainActivity"

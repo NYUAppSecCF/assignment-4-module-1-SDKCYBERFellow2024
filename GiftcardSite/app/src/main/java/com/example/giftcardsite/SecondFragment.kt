@@ -66,15 +66,16 @@ class SecondFragment : Fragment() {
                         loggedInUser = response.body()
                         Log.d("Register Success", "Register success. Boo.")
                         Log.d("Register Success", "Token:" + loggedInUser?.token.toString())
-                        /* create intent of to view giftcard  */
-                        var intent = Intent(Intent.ACTION_VIEW)
-                        /* type of activity browsing giftcard view page*/
-                        intent.type = "text/giftcards_browse"
-                        /* opening index page using browser */
-                        intent.data = Uri.parse("https://appsec.moyix.net/api/index")
-                        /* data is passed by creating putExtra intent logged in user is passed */
-                        intent.putExtra("User", loggedInUser);
-                        /* check if app exist on the device*/
+                        
+                        //var intent = Intent(Intent.ACTION_VIEW)                        
+                        //intent.type = "text/giftcards_browse"                        
+                        //intent.data = Uri.parse("https://appsec.moyix.net/api/index")                        
+                        //intent.putExtra("User", loggedInUser);                                           
+                        
+                        /* creating Explicit inetent using GiftCardActivity class */
+                        val intent = Intent(this, GiftCardActivity::class.java)
+                        intent.putExtra("User", loggedInUser)
+                         /* check if app exist on the device*/
                         if (intent.resolveActivity(packageManager) != null)
                         {
                             startActivity(intent)
