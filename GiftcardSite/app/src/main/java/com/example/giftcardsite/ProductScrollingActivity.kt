@@ -6,11 +6,11 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.hardware.Sensor
 import android.hardware.SensorEvent
-import android.hardware.SensorEventListener
+//import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
+//import android.location.LocationListener
+//import android.location.LocationManager
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -30,7 +30,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ProductScrollingActivity : AppCompatActivity(), SensorEventListener, LocationListener {
+class ProductScrollingActivity : AppCompatActivity() {
     var loggedInUser: User? = null
     private lateinit var sensorManager: SensorManager
     private var mAccel : Sensor? = null
@@ -46,8 +46,8 @@ class ProductScrollingActivity : AppCompatActivity(), SensorEventListener, Locat
         //}
         //locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5f, this)
         
-        sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-        mAccel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+        //sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        //mAccel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
         setContentView(R.layout.activity_scrolling)
         setSupportActionBar(findViewById(R.id.toolbar))
         findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout).title = title
