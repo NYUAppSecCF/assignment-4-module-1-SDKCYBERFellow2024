@@ -4,10 +4,12 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    
+    <!-- The app doesn't actually need location permissions, but the vulnerable code is still present. -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> -->
+    
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,51 +23,54 @@
             android:name=".UseCard"
             android:label="@string/title_activity_use_card"
             android:theme="@style/Theme.GiftcardSite.NoActionBar"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
             <action android:name="android.intent.action.VIEW" />
 
             <category android:name="android.intent.category.DEFAULT" />
 
-            <data android:mimeType="text/giftcards_use" />
-                <data android:scheme="giftcard" />
-                <data android:host="appsec.moyix.net"/>
+            <data 
+                android:mimeType="text/giftcards_use" 
+                android:scheme="giftcard"
+                android:host="appsec.moyix.net"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".GetCard"
             android:label="@string/title_activity_get_card"
             android:theme="@style/Theme.GiftcardSite.NoActionBar"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
             <action android:name="android.intent.action.VIEW" />
 
             <category android:name="android.intent.category.DEFAULT" />
 
-            <data android:mimeType="text/giftcards_buy" />
-                <data android:scheme="giftcard" />
-                <data android:host="appsec.moyix.net"/>
+            <data 
+                android:mimeType="text/giftcards_buy" 
+                android:scheme="giftcard" 
+                android:host="appsec.moyix.net"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".ProductScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/Theme.GiftcardSite.NoActionBar"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="text/giftcards_browse" />
-                <data android:scheme="giftcard" />
-                <data android:host="appsec.moyix.net"/>
+                <data 
+                    android:mimeType="text/giftcards_browse"
+                    android:scheme="giftcard"
+                    android:host="appsec.moyix.net"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.GiftcardSite.NoActionBar"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -76,15 +81,16 @@
             android:name=".CardScrollingActivity"
             android:label="@string/title_activity_scrolling_card"
             android:theme="@style/Theme.GiftcardSite.NoActionBar"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="text/giftcards_list" />
-                <data android:scheme="giftcard" />
-                <data android:host="appsec.moyix.net"/>
+                <data 
+                    android:mimeType="text/giftcards_list" 
+                    android:scheme="giftcard"
+                    android:host="appsec.moyix.net"/>
             </intent-filter>
         </activity>
     </application>

@@ -1,0 +1,34 @@
+What are the two types of Intents?
+
+Types of Intent are Explicit and Implicit.
+
+Explicit is precise target. 
+Implicit is not specific, options are provided to complete the action.
+
+Which type is generally more secure?
+Explicit is more secure because data is shared with intended component. 
+
+
+What type of Intent is used in SecondFragment.kt?
+In this file on line number 69 browser Intent is used. 
+Action for this Intent is View, that means display page 
+
+
+What type is used in ThirdFragment.kt?
+In this file on line number 69 putExtra intent is used.
+Action for this intent is to pass data for logged in user value. This intent is used to pass data from one activity to another activity.
+
+
+Which Intent is considered the "proper" implementation?
+Proper implementation of intent in Android is depend on context. 
+Explicit intent is secure since it is open inside your own application (activity)
+
+
+What does "proper" even mean in the context of secure Android development?
+proper mean in the same context and in the app. No external activity is called with this proper intent.
+Example is data handling activity in the app
+
+Using wrong intent can lead to security vulnerability. Also if app is using unsafe channel (activity) to send and receive data using 
+it can result in breach.
+
+Hint: Consider how attackers might take advantage of improperly scoped or overly permissive Intents.
