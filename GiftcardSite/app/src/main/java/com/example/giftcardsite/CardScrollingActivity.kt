@@ -10,7 +10,7 @@ import android.hardware.SensorEvent
 import android.hardware.SensorManager
 import android.location.Location
 import android.location.LocationListener
-import android.location.LocationManager
+//import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -30,7 +30,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class CardScrollingActivity : AppCompatActivity(), LocationListener {
+class CardScrollingActivity : AppCompatActivity() {
     private var loggedInUser : User? = null
     private lateinit var sensorManager: SensorManager
     private var mAccel: Sensor? = null;
